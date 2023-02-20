@@ -12,6 +12,10 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/",(req,res)=>{
+  res.send("This is Home Page for Checking url")
+})
+
 app.use("/users",UserRouter);
 
 app.use("/posts",authentication,PostRouter);
